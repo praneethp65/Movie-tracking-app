@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Movie Tracker App:
 Background/Motivation
 Welcome to the Movie Tracker App, This application is designed to help movie enthusiasts to keep track of the movies they have watched, and those they are currently watching. The motivation for this app came from the desire to provide a simple and efficient way to manage and keep track of movies watched. 
@@ -31,3 +32,6 @@ Logout Process: Securely logging out from the application.
 
 Conclusion:
 This README provides an overview of the Movie Tracker App, detailing its motivation, core features, and what will be showcased in the demonstration video. 
+=======
+# Movie-tracking-app
+>>>>>>> d931ab1a1649cac8ab4e1ca24943dc8aa022ecb5
