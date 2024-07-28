@@ -1,0 +1,16 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MoviesTracker.ViewModels"
+             x:Class="MoviesTracker.Views.SignUpPage">
+    <ContentPage.BindingContext>
+        <vm:SignUpViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Padding="20">
+        <Entry x:Name="EmailEntry" Placeholder="Email" Text="{Binding Email}" />
+        <Entry x:Name="PasswordEntry" Placeholder="Password" Text="{Binding Password}" IsPassword="True" />
+        <Entry x:Name="ConfirmPasswordEntry" Placeholder="Confirm Password" Text="{Binding ConfirmPassword}" IsPassword="True" />
+        <Label Text="{Binding ErrorMessage}" TextColor="Red" IsVisible="{Binding ErrorMessage, Converter={StaticResource StringToBoolConverter}}" />
+        <Button Text="Sign Up" Command="{Binding SignUpCommand}" />
+        <Button Text="Back to Login" Command="{Binding NavigateToLoginCommand}" />
+    </StackLayout>
+</ContentPage>

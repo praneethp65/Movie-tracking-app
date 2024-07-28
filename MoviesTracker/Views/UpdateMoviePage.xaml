@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MoviesTracker.Views.UpdateMoviePage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:MoviesTracker.ViewModels"
+    Title="Update Movie"
+    x:DataType="viewmodel:UpdateMovieViewModel">
+    <VerticalStackLayout Margin="20">
+        <Entry Placeholder="Title" Text="{Binding Movie.Title}" />
+        <Entry Placeholder="Director" Text="{Binding Movie.Director}" />
+        <Entry Placeholder="Image URL" Text="{Binding Movie.ImageUrl}" />
+        <DatePicker Date="{Binding Movie.ReleaseDate}" />
+        <HorizontalStackLayout>
+            <CheckBox IsChecked="{Binding Movie.IsFinished}" />
+            <Label Text="Have you finished watching this movie?" VerticalOptions="Center" />
+        </HorizontalStackLayout>
+        <Button
+            Background="#4A88DA"
+            Command="{Binding UpdateMovieCommand}"
+            Text="Update Movie"
+            TextColor="#eff5f3" />
+    </VerticalStackLayout>
+</ContentPage>
